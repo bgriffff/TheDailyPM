@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "StreamLine - Master Product Management in 17 Days",
+  title: "The Daily PM - Master Product Management in 17 Days",
   description:
-    "Become a confident PM with daily bite-sized lessons delivered to your inbox. Join 10,000+ product managers transforming their careers.",
+    "Become a confident PM with daily bite-sized lessons delivered to your inbox.",
   generator: "v0.app",
 }
 
