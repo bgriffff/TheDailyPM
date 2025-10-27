@@ -28,6 +28,13 @@ export default function Home() {
   const heroY = useTransform(scrollYProgress, [0, 0.3], [0, 100])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
 
+  const scrollToCurriculum = () => {
+    const curriculumSection = document.getElementById("curriculum")
+    if (curriculumSection) {
+      curriculumSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   const lessons = [
     { title: "What makes a good PM", week: "Week 1" },
     { title: "Product strategy", week: "Week 1" },
@@ -144,6 +151,7 @@ export default function Home() {
                   size="lg"
                   variant="outline"
                   className="text-lg px-8 py-6 border-2 border-indigo-200 hover:border-indigo-300 bg-transparent"
+                  onClick={scrollToCurriculum}
                 >
                   View Curriculum
                 </Button>
@@ -323,7 +331,7 @@ export default function Home() {
       </section>
 
       {/* Curriculum */}
-      <section className="py-32 bg-slate-50">
+      <section id="curriculum" className="py-32 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
