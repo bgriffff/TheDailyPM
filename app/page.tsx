@@ -567,8 +567,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-2xl font-bold text-white mb-2">PM Sprint</p>
-              <p className="text-sm">© 2025 PM Sprint. All rights reserved.</p>
+              <p className="text-2xl font-bold text-white mb-2">The Daily PM</p>
+              <p className="text-sm">© 2025 The Daily PM. All rights reserved.</p>
             </div>
             <div className="flex gap-8">
               <a href="#" className="hover:text-white transition-colors">
