@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -34,6 +34,30 @@ export default function Home() {
       curriculumSection.scrollIntoView({ behavior: "smooth", block: "start" })
     }
   }
+
+  const scrollToStartToday = () => {
+    const startTodaySection = document.getElementById("start-today")
+    if (startTodaySection) {
+      startTodaySection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
+  useEffect(() => {
+    const container = document.getElementById("convertkit-form-container")
+    if (container) {
+      const script = document.createElement("script")
+      script.src = "https://skillstreak.kit.com/2f54b1a248/index.js"
+      script.async = true
+      script.setAttribute("data-uid", "2f54b1a248")
+      container.appendChild(script)
+
+      return () => {
+        if (container.contains(script)) {
+          container.removeChild(script)
+        }
+      }
+    }
+  }, [])
 
   const lessons = [
     { title: "What makes a good PM", week: "Week 1" },
@@ -143,6 +167,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6 group"
+                  onClick={scrollToStartToday}
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -492,7 +517,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900 relative overflow-hidden">
+      <section
+        id="start-today"
+        className="py-32 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900 relative overflow-hidden"
+      >
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000" />
@@ -512,14 +540,8 @@ export default function Home() {
               credit card required.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-indigo-900 hover:bg-gray-100 text-lg px-10 py-7 shadow-2xl group"
-              >
-                Get Started Free
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+            <div className="flex justify-center mb-8">
+              <div id="convertkit-form-container" className="w-full max-w-2xl" />
             </div>
 
             <div className="mt-8 flex items-center justify-center gap-8 text-indigo-200 flex-wrap">
