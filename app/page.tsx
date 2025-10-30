@@ -21,12 +21,26 @@ import {
   Lightbulb,
 } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { DinoGame } from "@/components/dino-game"
 
 export default function Home() {
   const [activeLesson, setActiveLesson] = useState(null)
+  const [showDinoGame, setShowDinoGame] = useState(false)
+  const [footerClicks, setFooterClicks] = useState(0)
+
   const { scrollYProgress } = useScroll()
   const heroY = useTransform(scrollYProgress, [0, 0.3], [0, 100])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
+
+  const handleFooterClick = () => {
+    const newClicks = footerClicks + 1
+    setFooterClicks(newClicks)
+
+    if (newClicks >= 5) {
+      setShowDinoGame(true)
+      setFooterClicks(0)
+    }
+  }
 
   const scrollToCurriculum = () => {
     const curriculumSection = document.getElementById("curriculum")
@@ -75,7 +89,7 @@ export default function Home() {
     { title: "Partnering with Design (problem → flow → low-fi → usability loop)", week: "Week 3" },
     { title: "Sales, CS & the Roadmap Gauntlet (a.k.a. stakeholder survival kit)", week: "Week 3" },
     { title: "Backlog grooming that doesn't hurt", week: "Week 3" },
-    { title: 'Design laws every PM should know', week: "Week 3" },
+    { title: "Design laws every PM should know", week: "Week 3" },
     { title: "Competitive teardown", week: "Week 3" },
     { title: "SaaS business terms every PM should know", week: "Week 3" },
     { title: "Go-To-Market (lite) - launch levels, message, channels, enablement", week: "Week 3" },
@@ -571,7 +585,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-2xl font-bold text-white mb-2">The Daily PM</p>
+              <p
+                className="text-2xl font-bold text-white mb-2 cursor-pointer hover:text-indigo-400 transition-colors select-none"
+                onClick={handleFooterClick}
+                title="Click me 5 times..."
+              >
+                The Daily PM
+              </p>
               <p className="text-sm">© 2025 The Daily PM. All rights reserved.</p>
             </div>
             <div className="flex gap-8">
@@ -588,6 +608,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {showDinoGame && <DinoGame onClose={() => setShowDinoGame(false)} />}
     </div>
   )
 }
