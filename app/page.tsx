@@ -60,23 +60,26 @@ export default function Home() {
   }, [])
 
   const lessons = [
-    { title: "What makes a good PM", week: "Week 1" },
-    { title: "Product strategy", week: "Week 1" },
-    { title: "Stakeholder management", week: "Week 1" },
-    { title: "Roadmap & prioritization", week: "Week 1" },
-    { title: "User research fundamentals", week: "Week 2" },
-    { title: "Metrics that matter", week: "Week 2" },
-    { title: "Product discovery", week: "Week 2" },
-    { title: "Writing effective PRDs", week: "Week 2" },
-    { title: "Working with designers", week: "Week 3" },
-    { title: "Working with engineers", week: "Week 3" },
-    { title: "Agile & scrum for PMs", week: "Week 3" },
-    { title: "Go-to-market strategy", week: "Week 3" },
-    { title: "Product launches", week: "Week 3" },
-    { title: "A/B testing & experimentation", week: "Week 3" },
-    { title: "Data-driven decisions", week: "Week 3" },
-    { title: "Leadership & influence", week: "Week 3" },
-    { title: "Career growth as a PM", week: "Week 3" },
+    {
+      title: "PM in 100 seconds (ish). What is a Product Manager and what do they do? What skillz do you need?",
+      week: "Week 1",
+    },
+    { title: "Find the real problem (before you ship the wrong fix)", week: "Week 1" },
+    { title: "Customer research that doesn't creep + Customer research that doesn't creep", week: "Week 1" },
+    { title: "Jobs-to-be-done speed run — translate messy quotes into crisp jobs", week: "Week 1" },
+    { title: "Hypotheses for humans — stop guessing, start betting", week: "Week 2" },
+    { title: "Metrics that actually matter", week: "Week 2" },
+    { title: "Prioritization without buzzword tennis", week: "Week 2" },
+    { title: "Roadmaps users don't hate (and teams actually read)", week: "Week 2" },
+    { title: "Partnering with Engineering (CLARITY)", week: "Week 3" },
+    { title: "Partnering with Design (problem → flow → low-fi → usability loop)", week: "Week 3" },
+    { title: "Sales, CS & the Roadmap Gauntlet (a.k.a. stakeholder survival kit)", week: "Week 3" },
+    { title: "Backlog grooming that doesn't hurt (a.k.a. usable backlog, happier sprints)", week: "Week 3" },
+    { title: 'Design laws every PM should know (so your product feels "obvious")', week: "Week 3" },
+    { title: "Competitive teardown", week: "Week 3" },
+    { title: "SaaS business terms every PM should know (without an MBA)", week: "Week 3" },
+    { title: "Go-To-Market (lite) - launch levels, message, channels, enablement", week: "Week 3" },
+    { title: "Interview Prep: Product Sense (design a toaster for astronauts)", week: "Week 3" },
   ]
 
   const benefits = [
@@ -169,7 +172,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6 group"
                   onClick={scrollToStartToday}
                 >
-                  Start Free Trial
+                  Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
@@ -185,11 +188,11 @@ export default function Home() {
               <div className="flex items-center gap-8 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  No credit card required
+                  100% Free
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  First lesson free
+                  All 17 lessons
                 </div>
               </div>
             </motion.div>
@@ -430,8 +433,9 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6"
+              onClick={scrollToStartToday}
             >
-              Start Free Trial
+              Get Started Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
@@ -530,14 +534,14 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <Badge className="mb-6 bg-white/20 text-white border-0 px-4 py-2 backdrop-blur-sm">
               <Zap className="w-4 h-4 mr-2" />
-              Start Your Journey
+              100% Free Course
             </Badge>
 
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">Start today — first lesson is free</h2>
+            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">Start today — completely free</h2>
 
             <p className="text-xl text-indigo-100 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Join aspiring and current PMs who are building better product skills, one daily lesson at a time. No
-              credit card required.
+              Join aspiring and current PMs who are building better product skills, one daily lesson at a time. Get
+              instant free access to all 17 lessons.
             </p>
 
             <div className="flex justify-center mb-8">
