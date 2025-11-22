@@ -559,8 +559,26 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mb-8">
+              <style>{`
+                .convertkit-button {
+                  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+                  color: white !important;
+                  padding: 14px 32px !important;
+                  border-radius: 8px !important;
+                  font-weight: 600 !important;
+                  font-size: 16px !important;
+                  border: none !important;
+                  cursor: pointer !important;
+                  transition: transform 0.2s, box-shadow 0.2s !important;
+                  display: inline-block !important;
+                }
+                .convertkit-button:hover {
+                  transform: translateY(-2px) !important;
+                  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.4) !important;
+                }
+              `}</style>
               <a className="convertkit-button" href="https://skillstreak.kit.com/products/the-daily-pm" data-commerce>
-                Buy my product
+                Get Started Now
               </a>
             </div>
 
