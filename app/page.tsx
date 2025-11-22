@@ -559,7 +559,9 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mb-8">
-              <div id="convertkit-form-container" className="w-full max-w-2xl" />
+              <a className="convertkit-button" href="https://skillstreak.kit.com/products/the-daily-pm" data-commerce>
+                Buy my product
+              </a>
             </div>
 
             <div className="mt-8 flex items-center justify-center gap-8 text-indigo-200 flex-wrap">
