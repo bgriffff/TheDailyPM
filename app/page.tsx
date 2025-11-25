@@ -186,7 +186,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6 group"
                   onClick={scrollToStartToday}
                 >
-                  Get Started Free
+                  Get Started Now
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
@@ -202,7 +202,7 @@ export default function Home() {
               <div className="flex items-center gap-8 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  100% Free
+                  Just $1
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
@@ -318,7 +318,7 @@ export default function Home() {
             className="text-center mb-20"
           >
             <Badge className="mb-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-0">
-              Simple Process
+              Affordable & Instant Access
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">How it works</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -330,8 +330,8 @@ export default function Home() {
             {[
               {
                 icon: Mail,
-                title: "Sign up for free",
-                description: "Enter your email and get instant access to the first lesson.",
+                title: "Sign up now",
+                description: "Enter your email and complete your $1 purchase to get instant access.",
                 step: "01",
               },
               {
@@ -449,7 +449,7 @@ export default function Home() {
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6"
               onClick={scrollToStartToday}
             >
-              Get Started Free
+              Get Started Now - Just $1
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
