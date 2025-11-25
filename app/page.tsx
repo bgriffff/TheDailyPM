@@ -202,7 +202,7 @@ export default function Home() {
               <div className="flex items-center gap-8 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  Just $1
+                  Pick your price
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
@@ -331,7 +331,7 @@ export default function Home() {
               {
                 icon: Mail,
                 title: "Sign up now",
-                description: "Enter your email and complete your $1 purchase to get instant access.",
+                description: "Enter your email and complete your purchase to get instant access.",
                 step: "01",
               },
               {
@@ -449,7 +449,7 @@ export default function Home() {
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-lg px-8 py-6"
               onClick={scrollToStartToday}
             >
-              Get Started Now - Just $1
+              Get Started Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
